@@ -1,0 +1,26 @@
+{
+  "name": "hr-vip-ideaforge",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HR VIP IdeaForge - a crowdsourced innovation & problem solving platform (MERN)",
+  "scripts": {
+    "install:all": "npm install && npm --prefix backend install && npm --prefix frontend install",
+    "dev": "concurrently -n API,WEB -c magenta,cyan \"npm:dev:backend\" \"npm:dev:frontend\"",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "seed": "npm --prefix backend run seed",
+    "build": "npm --prefix frontend run build",
+    "start": "npm --prefix backend start",
+    "lint": "npm --prefix backend run lint && npm --prefix frontend run lint",
+    "test": "npm --prefix backend test && npm --prefix frontend test",
+    "test:contract": "npm --prefix backend run test:contract",
+    "test:suggestions": "npm --prefix backend run test:suggestions",
+    "test:ui": "npm --prefix backend run test:ui"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
